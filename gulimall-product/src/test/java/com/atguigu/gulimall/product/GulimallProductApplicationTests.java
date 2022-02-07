@@ -38,6 +38,7 @@ public class GulimallProductApplicationTests {
 
     @Test
     public void testUpload() throws FileNotFoundException {
+        //aa
     }
 
     @Test
