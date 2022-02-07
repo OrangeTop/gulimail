@@ -7,7 +7,12 @@ spring:
     password: crgmysql
     url: jdbc:mysql://101.132.250.127:3306/gulimall_oms
     driver-class-name: com.mysql.jdbc.Driver
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.132.250.127:8848
+  application:
+    name: gulimall-order
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:

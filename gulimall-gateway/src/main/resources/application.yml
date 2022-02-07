@@ -14,7 +14,25 @@ spring:
           uri: https://www.baidu.com
           predicates:
             - Query=url,baidu
-        - id: test_route
-          uri: https://www.qq.com
+        - id: third_party_route
+          uri: lb://gulimall-third-party
           predicates:
-            - Query=url,qq
+            - Path=/api/third-party/**
+          filters:
+            - RewritePath=/api/third-party/(?<segment>.*),/$\{segment}
+        - id: product_route
+          uri: lb://gulimall-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}  #实现路径重写
+
+            ## 所有前端项目带  /api
+            ## http://localhost:88/api/captcha.jpg
+            ## http://localhost:8080/renren-fast/captcha.jpg
