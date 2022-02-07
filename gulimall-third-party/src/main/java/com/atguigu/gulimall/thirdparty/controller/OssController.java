@@ -40,7 +40,7 @@ public class OssController {
 
     @RequestMapping("/oss/test")
     public void test() throws FileNotFoundException {
-
+        //test push
 //        // 填写文件名。文件名包含路径，不包含Bucket名称。例如exampledir/exampleobject.txt。
         String objectName = "C:\\Users\\75173\\Pictures\\Camera Roll\\bluesky.png";
 //
