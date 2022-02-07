@@ -38,27 +38,6 @@ public class GulimallProductApplicationTests {
 
     @Test
     public void testUpload() throws FileNotFoundException {
-        
-//        // 填写文件名。文件名包含路径，不包含Bucket名称。例如exampledir/exampleobject.txt。
-//        String objectName = "C:\\Users\\75173\\Pictures\\Camera Roll\\bluesky.png";
-//
-//        // 创建OSSClient实例。
-//        String endpoint = "oss-cn-beijing.aliyuncs.com";
-//        String accessId = "LTAI5t8jYT3Frk9npajTcDoQ";
-//
-//        String secretId = "y5ghrIX7FMhXWRktExhl8OKjAAVogP";
-//
-//        OSS ossClient = new OSSClientBuilder().build(endpoint, accessId, secretId);
-//
-//        String content = "Hello OSS";
-//        String bucket = "gulimall-ora";
-////        ossClient.putObject(bucket, objectName, new ByteArrayInputStream(content.getBytes()));
-////
-////        // 关闭OSSClient。
-////        ossClient.shutdown();
-//        InputStream inputStream = new FileInputStream(objectName);
-//        ossClient.putObject(bucket,"aa.jpg",inputStream);
-//        ossClient.shutdown();
     }
 
     @Test
